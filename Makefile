@@ -6,7 +6,7 @@
 #    By: gwood <gwood@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/13 13:41:04 by gwood             #+#    #+#              #
-#    Updated: 2018/03/17 19:40:40 by gwood            ###   ########.fr        #
+#    Updated: 2018/03/17 23:06:22 by gwood            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,11 +29,11 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	gcc $(FLAGS) $(FT_LNK) $(OBJECTS) -o $(NAME)
 
-$(FT_LIB):
-	make -C $(FT_DIR)
-
-$(OBJECTS): $(FT_LIB)
+$(OBJECTS):
 	gcc $(FLAGS) -c $(CFILES)
+
+lib:
+	make -C $(FT_DIR) re
 
 clean:
 	$(RM) $(OBJECTS)
