@@ -6,12 +6,12 @@
 #    By: gwood <gwood@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/13 13:41:04 by gwood             #+#    #+#              #
-#    Updated: 2018/03/17 23:06:22 by gwood            ###   ########.fr        #
+#    Updated: 2018/04/02 23:06:22 by mtajjiou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fillit
-FUNCTS = fillit
+FUNCTS = fillit error checker
 RM = /bin/rm -f
 CFILES = $(patsubst %, %.c, $(FUNCTS))
 OBJECTS = $(patsubst %, %.o, $(FUNCTS))
